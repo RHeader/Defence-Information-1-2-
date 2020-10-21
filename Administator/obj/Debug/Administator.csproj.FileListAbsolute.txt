@@ -1,0 +1,13 @@
+W:\Project C#\Administator\Administator\bin\Debug\Administator.exe.config
+W:\Project C#\Administator\Administator\bin\Debug\Administator.exe
+W:\Project C#\Administator\Administator\bin\Debug\Administator.pdb
+W:\Project C#\Administator\Administator\obj\Debug\Administator.csprojAssemblyReference.cache
+W:\Project C#\Administator\Administator\obj\Debug\Administator.Authorization.resources
+W:\Project C#\Administator\Administator\obj\Debug\Administator.Properties.Resources.resources
+W:\Project C#\Administator\Administator\obj\Debug\Administator.csproj.GenerateResource.cache
+W:\Project C#\Administator\Administator\obj\Debug\Administator.exe
+W:\Project C#\Administator\Administator\obj\Debug\Administator.pdb
+W:\Project C#\Administator\Administator\obj\Debug\Administator.Auth.resources
+W:\Project C#\Administator\Administator\bin\Debug\UsersDataBase.mdf
+W:\Project C#\Administator\Administator\bin\Debug\UsersDataBase_log.ldf
+W:\Project C#\Administator\Administator\obj\Debug\Administator.AdministratorForm.resources
