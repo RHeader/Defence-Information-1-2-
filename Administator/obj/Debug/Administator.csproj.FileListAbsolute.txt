@@ -11,3 +11,17 @@ W:\Project C#\Administator\Administator\obj\Debug\Administator.Auth.resources
 W:\Project C#\Administator\Administator\bin\Debug\UsersDataBase.mdf
 W:\Project C#\Administator\Administator\bin\Debug\UsersDataBase_log.ldf
 W:\Project C#\Administator\Administator\obj\Debug\Administator.AdministratorForm.resources
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\bin\Debug\UsersDataBase.mdf
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\bin\Debug\UsersDataBase_log.ldf
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\bin\Debug\Administator.exe.config
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\bin\Debug\Administator.exe
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\bin\Debug\Administator.pdb
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\obj\Debug\Administator.csprojAssemblyReference.cache
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\obj\Debug\Administator.AdministratorForm.resources
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\obj\Debug\Administator.Auth.resources
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\obj\Debug\Administator.Authorization.resources
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\obj\Debug\Administator.Properties.Resources.resources
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\obj\Debug\Administator.csproj.GenerateResource.cache
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\obj\Debug\Administator.csproj.CoreCompileInputs.cache
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\obj\Debug\Administator.exe
+C:\Users\свинище\Downloads\Defence-Information-1-2--master\Administator\obj\Debug\Administator.pdb

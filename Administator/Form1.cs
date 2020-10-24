@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace Administator
 {
+   
     public partial class Authorization : Form
     {
-        Account Logined;
+    public  static  int CrashHandlerPassword=0;
+      Account Logined;
         Form AuthorizationForm;
         public Authorization()
         {
@@ -32,10 +34,20 @@ namespace Administator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (CrashHandlerPassword == 3)
+            {
+                Application.Exit();
+            }
             string login = LoginText.Text;
             string password= PasswordText.Text;
           Logined = new Account(password,login);
             Logined.Login();
+            CrashHandlerPassword++;
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("8 Вариант .Наличие латинских букв и символов кириллицы.  Никифоров Антон");
         }
     }
 }

@@ -9,12 +9,14 @@ using System.Windows.Forms;
 
 namespace Administator
 {
-    class DataController
+   public class DataController
     {
-        string SqlConnectionPath = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=W:\Project C#\Administator\Administator\UsersDataBase.mdf;Integrated Security=True";
+        string SqlConnectionPath = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= W:\Project C#\Administator\Administator\UsersDataBase.mdf;Integrated Security=True";
         SqlConnection sqlConnection;
-      
-       async public void SaveData(string Login,string Password,string FirstName,string LastName)
+        SqlDataAdapter adapter;
+        DataSet dataSet;
+
+        async public void SaveData(string Login,string Password,string FirstName,string LastName)
         {
             try
             {
@@ -80,7 +82,8 @@ namespace Administator
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Пароль или Логин введены не верно", "Ошибка", MessageBoxButtons.OK,
+        MessageBoxIcon.Information);
             }
             finally
             {
@@ -90,7 +93,42 @@ namespace Administator
             return false;
         }
 
-        async public void LoadInfoForAdmin ()
+         public void LoadInfoForAdmin (ref DataGridView ShowData)
+        {
+            
+            try
+            {
+                sqlConnection = new SqlConnection(this.SqlConnectionPath);
+              sqlConnection.Open();
+              adapter = new SqlDataAdapter("SELECT * FROM [Table]", sqlConnection);
+              dataSet = new DataSet();
+                adapter.Fill(dataSet);
+                ShowData.DataSource = dataSet.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+        }
+
+         async public void UpdateInfo(DataGridView ShowDataAdmin)
+        {
+
+            try
+            {
+                sqlConnection = new SqlConnection(this.SqlConnectionPath);
+                await sqlConnection.OpenAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adapter);
+            adapter.Update(dataSet);
+        }
+        async public void UpdatePassword(int id,string Password)
         {
             try
             {
@@ -101,10 +139,9 @@ namespace Administator
             {
                 MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            SqlCommand command = new SqlCommand("INSERT INTO [Table] (Login, Password, FirstName,LastName)VALUES (@Login, @Password, @FirstName,@LastName )", sqlConnection);
+            SqlCommand command = new SqlCommand("UPDATE [Table] SET Password = N'" + Password + "' WHERE Id = " + id, sqlConnection);
+           await command.ExecuteNonQueryAsync();
         }
-
-
 
     }
 }
