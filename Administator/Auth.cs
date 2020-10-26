@@ -28,7 +28,7 @@ namespace Administator
             Data = new DataController();
            
             if (!string.IsNullOrEmpty(PasswordReg.Text))
-            { if (PasswordReg.Text == RepeatPassword.Text)
+            { if (PasswordReg.Text == RepeatPassword.Text && PasswordReg.Text.Length>=8 && RepeatPassword.Text.Length>=8)
                 {   string Password = PasswordReg.Text;
                     string Login = LoginReg.Text;
                     string FirstName = FirstNameReg.Text;

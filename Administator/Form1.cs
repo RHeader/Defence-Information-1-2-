@@ -40,8 +40,15 @@ namespace Administator
             }
             string login = LoginText.Text;
             string password= PasswordText.Text;
-          Logined = new Account(password,login);
-            Logined.Login();
+            if (password.Length >= 8)
+            {
+                Logined = new Account(password, login);
+                Logined.Login();
+            }
+            else
+            {
+                MessageBox.Show("Введеный пароль слишком короткий, минимальная длина 8 символов");
+            }
             CrashHandlerPassword++;
         }
 
